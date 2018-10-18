@@ -384,9 +384,10 @@ def evalpolicype (pe,policy,discount):
         for i in range(6):
             for y in range(6):
                 for u in range(12):
+                    output = []
+                    ref = []
                     for a in range(100):
-                        output = []
-                        ref = []
+                
                         nx = nextstate(pe,[i,y,u],policy[i][y][u])
                         recof = [nx[0],nx[1]]
                         if nx not in output:
